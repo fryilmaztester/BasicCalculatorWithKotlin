@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/secondNumber"
+        android:layout_width="253dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="35dp"
+        android:ems="10"
+        android:hint="İkinci Sayıyı Giriniz"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstNumber" />
+
+    <EditText
+        android:id="@+id/firstNumber"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="18dp"
+        android:ems="10"
+        android:hint="İlk Sayıyı Giriniz"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/secondNumber"
+        app:layout_constraintEnd_toEndOf="@+id/secondNumber"
+        app:layout_constraintStart_toStartOf="@+id/secondNumber"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="294dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginBottom="164dp"
+        android:text="Result: "
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="273dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="79dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondNumber">
+
+        <Button
+            android:id="@+id/buttonOne"
+            android:layout_width="67dp"
+            android:layout_height="47dp"
+            android:onClick="add"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/buttonTwo"
+            android:layout_width="67dp"
+            android:layout_height="47dp"
+            android:onClick="sub"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/buttonThree"
+            android:layout_width="67dp"
+            android:layout_height="47dp"
+            android:onClick="div"
+            android:text="/" />
+
+        <Button
+            android:id="@+id/buttonFour"
+            android:layout_width="67dp"
+            android:layout_height="47dp"
+            android:onClick="mul"
+            android:text="*" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
